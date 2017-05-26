@@ -1,0 +1,27 @@
+body {
+	background: url("../images/background1.jpg");
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+  main {
+    flex: 1 0 auto;
+}
+
+.container {
+	width: 100%;
+}
+.nav-wrapper {
+	background-color: #6d4c41;
+	color: #43a047;
+}
+
+.footer {
+	background-color: #6d4c41;
+	color: white;
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
