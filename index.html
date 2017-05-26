@@ -1,85 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Price Comparison Guide</title>
-<!-- Link to jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  	crossorigin="anonymous"></script>
-<!-- Link to Reset CSS -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
-<!-- Link to Materialize CSS -->
+    <meta charset="UTF-8">
+    <title>Price Comparison Guide</title>
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Link to Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
+    <!-- Link to Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-<!-- Link to Materialize CSS Icons -->   
+    <!-- Link to Materialize CSS Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- Link to Style CSS -->
-	<link rel="stylesheet" type="text/css" href="./assets/css/style.css"></link>
+    <!-- Link to Style CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"></link>
+    <!-- Link to JavaScript -->
+    <script type="text/javascript" src="./assets/javascript/logic.js"></script>
 </head>
+
 <body>
-	<div class="container">
-		<!-- Navbar -->
-		<nav>
-		    <div class="nav-wrapper">
-		      <a href="./assets/images/cart1.jpg"></a>
-		      <a href="#!" class="brand-logo">Smart Shopper</a>
-		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-		      <ul class="right hide-on-med-and-down">
-		        <li><a href="index.html">Home</a></li>
-		        <li><a href="shopping-cart.html">View Cart</a></li>
-		        <li><a href="login.html">Login</a></li>
-		      </ul>
-		      <ul class="side-nav" id="mobile-demo">
-		        <li><a href="index.html">Home</a></li>
-		        <li><a href="shopping-cart.html">View Cart</a></li>
-		        <li><a href="login.html">Login</a></li>
-		      </ul>
-		    </div>
-  		</nav>
-		<!-- Cards for Questions and Results -->
-		<div class="row">
-	        <div class="col s12 m5">
-	          <div class="card brown darken-1">
-	            <div class="card-content white-text">
-	              <span class="card-title">Item Search</span>
-				<div class="input-field">
-					<input id="shopping-item" type="text" class="validate">
-                    <label for="shopping-item">Shopping Item</label>
-				</div>
-	              <p>I am a very simple card. I am good at containing small bits of information.
-	              I am convenient because I require little markup to use effectively.</p>
-
-	            </div>
-
-	            <div class="card-action">
-	              <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i>
-  					</button>
-	            </div>
-	          </div>
-	        </div>
-
-			<div class="col s12 m7">
-	          <div class="card brown darken-1">
-	            <div class="card-content white-text">
-	              <span class="card-title">Price Comparison Results</span>
-	              <p>I am a very simple card. I am good at containing small bits of information.
-	              I am convenient because I require little markup to use effectively.</p>
-	            </div>
-	            <div class="card-action">
-	            	<a href="#">This is a link</a>
-	            </div>
-	          </div>
-	        </div>
-	    </div>
-
-
-
-		<!-- Footer -->
-  		<div class="footer center">© 2017 Price Comparison Guide
-  		</div>
-
-	</div>
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="./assets/images/cart1.jpg"></a>
+                <a href="#!" class="brand-logo">Smart Shopper</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shopping-cart.html">View Cart</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shopping-cart.html">View Cart</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Cards for Questions and Results -->
+        <div class="row">
+            <div class="col s12 m5">
+                <div class="card brown darken-1">
+                    <div class="card-content white-text">
+                        <span class="center card-title">Item Search</span>
+                        <div class="row">
+                            <div class="col s12 input-field">
+                                <input id="shopping-item" type="text" class="validate">
+                                <label for="shopping-item">Shopping Item</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s8 s4 input-field">
+                                <input type="number" id="zipcode">
+                                <label for="zipcode">Zipcode</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit<i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m7">
+                <div class="card brown darken-1">
+                    <div class="card-content white-text">
+                        <span class="center card-title">Price Comparison Results</span>
+                        <table class="bordered">
+                            <thead>
+                                <tr>
+                                    <td>Add to cart</td>
+                                    <td>Item</td>
+                                    <td>Store</td>
+                                    <td>Location</td>
+                                    <td>Price $$</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="store1" id="store1" />
+                                        <label for="store1"></label>
+                                    </td>
+                                    <td>Xbox One</td>
+                                    <td>Walmart</td>
+                                    <td>Some town, NJ, 00000</td>
+                                    <td>$500.00</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="store2" id="store2" />
+                                        <label for="store2"></label>
+                                    </td>
+                                    <td>Xbox One</td>
+                                    <td>Walmart</td>
+                                    <td>Some town, NJ, 00000</td>
+                                    <td>$500.00</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="store3" id="store3" />
+                                        <label for="store3"></label>
+                                    </td>
+                                    <td>Xbox One</td>
+                                    <td>Walmart</td>
+                                    <td>Some town, NJ, 00000</td>
+                                    <td>$500.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn waves-effect waves-light" id="cart" type="cart" name="action">Add to Cart<i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container center">
+                    © 2017 Smart Shopper: Price Comparison Guide
+                </div>
+            </div>
+        </footer>
 </body>
-<!-- Link to JavaScript -->
-	<script type="text/javascript" src="./assets/javascript/logic.js"></script>
 </html>
