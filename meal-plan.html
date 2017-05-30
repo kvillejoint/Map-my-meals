@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Map MY Meals</title>
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Link to Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- Link to Materialize CSS Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Link to Style CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"></link>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Map My Meals</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="meal-plan.html">Meal plan</a></li>
+                    <li><a href="meal-search.html">Meal Search</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <ul class="right side-nav" id="mobile-demo">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="meal-plan.html">Meal plan</a></li>
+                    <li><a href="meal-search.html">Meal Search</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                </ul>
+            </div>
+        </nav>
+        <!-- Grid for Calendar Section -->
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card brown darken-1">
+                    <div class="card-content white-text">
+                        <span class="center card-title">Search Results</span>
+                        <table class="bordered">
+                            <thead>
+                                <tr>
+                                    <td id="meal">Meal of the Day</td>
+                                    <td id="day1">Day 1</td>
+                                    <td id="day2">Day 2</td>
+                                    <td id="day3">Day 3</td>
+                                    <td id="day4">Day 4</td>
+                                    <td id="day5">Day 5</td>
+                                    <td id="day6">Day 6</td>
+                                    <td id="day7">Day 7</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Breakfast</td>
+                                    <td class="breakfast" id="breakfast1"></td>
+                                    <td class="breakfast" id="breakfast2"></td>
+                                    <td class="breakfast" id="breakfast3"></td>
+                                    <td class="breakfast" id="breakfast4"></td>
+                                    <td class="breakfast" id="breakfast5"></td>
+                                    <td class="breakfast" id="breakfast6"></td>
+                                    <td class="breakfast" id="breakfast7"></td>
+                                </tr>
+                                <tr>
+                                    <td>Lunch</td>
+                                    <td class="lunch" id="lunch1"></td>
+                                    <td class="lunch" id="lunch2"></td>
+                                    <td class="lunch" id="lunch3"></td>
+                                    <td class="lunch" id="lunch4"></td>
+                                    <td class="lunch" id="lunch5"></td>
+                                    <td class="lunch" id="lunch6"></td>
+                                    <td class="lunch" id="lunch7"></td>
+                                </tr>
+                                <tr>
+                                    <td>Dinner</td>
+                                    <td class="dinner" id="dinner1"></td>
+                                    <td class="dinner" id="dinner2"></td>
+                                    <td class="dinner" id="dinner3"></td>
+                                    <td class="dinner" id="dinner4"></td>
+                                    <td class="dinner" id="dinner5"></td>
+                                    <td class="dinner" id="dinner6"></td>
+                                    <td class="dinner" id="dinner7"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container center">
+                    © 2017 Map My Meals: Meal Planner and Nutrition Guide
+                </div>
+            </div>
+        </footer>
+
+</body>
+<!-- Link to JavaScript -->
+<script type="text/javascript" src="./assets/javascript/logic.js"></script>
+</html>
