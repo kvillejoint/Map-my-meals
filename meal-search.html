@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Map MY Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -41,17 +42,34 @@
         </nav>
         <!-- SECTION NEEDS REVISION FOR DROPDOWN ITEMS -->
         <!-- Cards for Questions and Results -->
-        <div class="center row">
-            <div class="col s12 m1">
+        <form>
+            <div class="center row">
+                <div class="col s12 m1">
+                </div>
+                <div class="col s12 m10">
+                    <div class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="center card-title">Recipe Search</span>
+                            <div class="row">
+                                <div class="col s6">
+                                    <!-- Dropdown Structure -->
+                                    <ul id='dropdown1' class='dropdown-content'>
+                                        <li><a href="#!">one</a></li>
+                                        <li><a href="#!">two</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#!">three</a></li>
+                                        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                                        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m1">
+                    </div>
+                </div>
             </div>
-            <div class="col s12 m10">
-                <div class="card brown darken-1">
-                    <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Login With Google<i class="material-icons right">send</i>
-                            </button>
-            </div>
-            <div class="col s12 m1">
-            </div>
-        </div>
+        </form>
         <!-- Footer -->
         <footer class="page-footer">
             <div class="footer-copyright">
@@ -63,4 +81,5 @@
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
+
 </html>
