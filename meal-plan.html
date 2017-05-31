@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Map MY Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -25,7 +26,7 @@
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">Map My Meals</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="meal-plan.html">Meal plan</a></li>
                     <li><a href="meal-search.html">Meal Search</a></li>
@@ -40,72 +41,116 @@
                 </ul>
             </div>
         </nav>
-        <!-- Grid for Calendar Section -->
-        <div class="row">
-            <div class="col s12 m12">
-                <div class="card brown darken-1">
-                    <div class="card-content white-text">
-                        <span class="center card-title">Search Results</span>
-                        <table class="bordered">
-                            <thead>
-                                <tr>
-                                    <td id="meal">Meal of the Day</td>
-                                    <td id="day1">Day 1</td>
-                                    <td id="day2">Day 2</td>
-                                    <td id="day3">Day 3</td>
-                                    <td id="day4">Day 4</td>
-                                    <td id="day5">Day 5</td>
-                                    <td id="day6">Day 6</td>
-                                    <td id="day7">Day 7</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Breakfast</td>
-                                    <td class="breakfast" id="breakfast1"></td>
-                                    <td class="breakfast" id="breakfast2"></td>
-                                    <td class="breakfast" id="breakfast3"></td>
-                                    <td class="breakfast" id="breakfast4"></td>
-                                    <td class="breakfast" id="breakfast5"></td>
-                                    <td class="breakfast" id="breakfast6"></td>
-                                    <td class="breakfast" id="breakfast7"></td>
-                                </tr>
-                                <tr>
-                                    <td>Lunch</td>
-                                    <td class="lunch" id="lunch1"></td>
-                                    <td class="lunch" id="lunch2"></td>
-                                    <td class="lunch" id="lunch3"></td>
-                                    <td class="lunch" id="lunch4"></td>
-                                    <td class="lunch" id="lunch5"></td>
-                                    <td class="lunch" id="lunch6"></td>
-                                    <td class="lunch" id="lunch7"></td>
-                                </tr>
-                                <tr>
-                                    <td>Dinner</td>
-                                    <td class="dinner" id="dinner1"></td>
-                                    <td class="dinner" id="dinner2"></td>
-                                    <td class="dinner" id="dinner3"></td>
-                                    <td class="dinner" id="dinner4"></td>
-                                    <td class="dinner" id="dinner5"></td>
-                                    <td class="dinner" id="dinner6"></td>
-                                    <td class="dinner" id="dinner7"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <!-- Search optimization section -->
+        <div id="search-parameters" class="container">
+            <div class="row">
+                <div class="col offset-s1 s10 offset-s1">
+                    <div class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Tell us what to look for:</span>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Diet Type</a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content' multiple>                                                     
+                                <li>Atkins</li>
+                                <li>South Beach</li>
+                                <li>Paleo</li>
+                                <li>Vegetarian</li>
+                                <li>Vegan</li>
+                                <li>Weight Watchers</li>
+                                <li>Pescetarian</li>
+                            </ul>
+
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Food allergy</a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#!">one</a></li>
+                                <li><a href="#!">two</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!">three</a></li>
+                                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                            </ul>
+                            <div class="divider"></div>
+                            <!-- table displaying search results -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container center">
-                    © 2017 Map My Meals: Meal Planner and Nutrition Guide
+        <!-- Results section -->
+        <div id="meal-results" class="container">
+            <h2>Results:</h2>
+            <div class="row">
+                <div class="col offset-2 s8 offset-s2">
+                    <div id="breakfast" class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Breakfast:</span>
+                        </div>
+                        <div class="card-action">
+                            <ul id="breakfast-results">
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col offset-2 s8 offset-s2">
+                    <div id="lunch" class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Lunch:</span>
+                        </div>
+                        <div class="card-action">
+                            <ul id="lunch-results">
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col offset-2 s8 offset-s2">
+                    <div id="dinner" class="card brown darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Dinner:</span>
+                        </div>
+                        <div class="card-action">
+                            <ul id="dinner-results">
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container center">
+                © 2017 Map My Meals: Meal Planner and Nutrition Guide
+            </div>
+        </div>
+    </footer>
 
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
+
 </html>
