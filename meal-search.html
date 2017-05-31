@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Map MY Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -21,63 +20,70 @@
 
 <body>
     <div class="container">
-        <!-- Navbar -->
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Map My Meals</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-                <ul class="right side-nav" id="mobile-demo">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- SECTION NEEDS REVISION FOR DROPDOWN ITEMS -->
-        <!-- Cards for Questions and Results -->
-        <form>
-            <div class="center row">
-                <div class="col s12 m1">
+        <header>
+            <!-- Navbar -->
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">Map My Meals</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="meal-plan.html">Meal Plan</a></li>
+                        <li><a href="meal-search.html">Meal Search</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                    <ul class="right side-nav" id="mobile-demo">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="meal-plan.html">Meal Plan</a></li>
+                        <li><a href="meal-search.html">Meal Search</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
                 </div>
-                <div class="col s12 m10">
-                    <div class="card brown darken-1">
-                        <div class="card-content white-text">
-                            <span class="center card-title">Recipe Search</span>
-                            <div class="row">
-                                <div class="col s6">
-                                    <!-- Dropdown Structure -->
-                                    <ul id='dropdown1' class='dropdown-content'>
-                                        <li><a href="#!">one</a></li>
-                                        <li><a href="#!">two</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#!">three</a></li>
-                                        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                                        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-                                    </ul>
+            </nav>
+        </header>
+        <!-- Section for Meal Search -->
+        <main>
+            <form>
+                <div class="center row">
+                    <!-- Empty div on left side to center main div -->
+                    <div class="col s12 m1">
+                    </div>
+                    <!-- Main div for meal search input box and button -->
+                    <div class="col s12 m10">
+                        <div class="card brown darken-1">
+                            <div class="card-content white-text">
+                                <span class="center card-title">Meal Search</span>
+                                <div class="row" id="searchRow">
+                                    <div class="center-align col s12">
+                                        <input id="search" type="search" class="search">
+                                        <label for="search">Search Here</label>
+                                    </div>
+                                    <br />
+                                    <button class="btn waves-effect waves-light" id="submit" type="search" name="action">Search<i class="material-icons right">search</i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m1">
+                    <br />
+                    <!--Empty div for recipes to populate -->
+                    <div class="card" id="search-results">
                     </div>
                 </div>
-            </div>
-        </form>
-        <!-- Footer -->
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container center">
-                    © 2017 Map My Meals: Meal Planner and Nutrition Guide
+                <!-- Empty div on left side to center main div -->
+                <div class="col s12 m1">
                 </div>
+    </div>
+    </form>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container center">
+                © 2017 Map My Meals: Meal Planner and Nutrition Guide
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
