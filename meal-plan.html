@@ -49,33 +49,51 @@
                         <div class="card-content white-text">
                             <span class="card-title">Tell us what to look for:</span>
                             <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Diet Type</a>
+                            <a class='dropdown-button btn' href='#' data-activates='diet-dropdown'>Diet Type</a>
 
                             <!-- Dropdown Structure -->
-                            <ul id='dropdown1' class='dropdown-content' multiple>                                                     
-                                <li>Atkins</li>
-                                <li>South Beach</li>
-                                <li>Paleo</li>
-                                <li>Vegetarian</li>
-                                <li>Vegan</li>
-                                <li>Weight Watchers</li>
-                                <li>Pescetarian</li>
+                            <ul id='diet-dropdown' class='dropdown-content'>
+                                <li id="diet-1">Atkins</li>
+                                <li id="diet-2">South Beach</li>
+                                <li id="diet-3">Paleo</li>
+                                <li id="diet-4">Vegetarian</li>
+                                <li id="diet-5">Vegan</li>
+                                <li id="diet-6">Weight Watchers</li>
+                                <li id="diet-7">Pescetarian</li>
                             </ul>
 
                             <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Food allergy</a>
+                            <a class='dropdown-button btn' href='#' data-activates='allergy-dropdown'>Food allergy</a>
 
                             <!-- Dropdown Structure -->
-                            <ul id='dropdown1' class='dropdown-content'>
-                                <li><a href="#!">one</a></li>
-                                <li><a href="#!">two</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#!">three</a></li>
-                                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                            <ul id='allergy-dropdown' class='dropdown-content'>
+                                <li id="allergy-01">Dairy</li>
+                                <li id="allergy-02">Eggs</li>
+                                <li id="allergy-03">Gluten</li>
+                                <li id="allergy-04">Peanuts</li>
+                                <li id="allergy-05">Seafood</li>
+                                <li id="allergy-06">Sesame</li>
+                                <li id="allergy-07">Soy</li>
+                                <li id="allergy-08">Sulfite</li>
+                                <li id="allergy-09">Tree nuts</li>
+                                <li id="allergy-10">Wheat</li>
                             </ul>
+                            <br><br>
                             <div class="divider"></div>
                             <!-- table displaying search results -->
+                            <div class="card-action">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Results</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Diet type</td>
+                                            <td>Food allergies</td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -83,7 +101,6 @@
         </div>
         <!-- Results section -->
         <div id="meal-results" class="container">
-            <h2>Results:</h2>
             <div class="row">
                 <div class="col offset-2 s8 offset-s2">
                     <div id="breakfast" class="card brown darken-1">
@@ -92,11 +109,6 @@
                         </div>
                         <div class="card-action">
                             <ul id="breakfast-results">
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
                             </ul>
                         </div>
                     </div>
@@ -110,11 +122,6 @@
                         </div>
                         <div class="card-action">
                             <ul id="lunch-results">
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
                             </ul>
                         </div>
                     </div>
@@ -128,11 +135,6 @@
                         </div>
                         <div class="card-action">
                             <ul id="dinner-results">
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
-                                <li>test</li>
                             </ul>
                         </div>
                     </div>
