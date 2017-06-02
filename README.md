@@ -1,4 +1,13 @@
 # project-1
-- hide navbar buttons until there's a diet search registered (hide for new user first log in)
 - add in click listeners for all buttons
 - store variables into firebase
+
+meal plan page:
+- hide meal tabs, and display only after search has been submitted
+
+meal search page:
+- button click listener
+
+
+*bonus*
+- add "recent search" area, populate buttons for recent searches that will call API on both pages

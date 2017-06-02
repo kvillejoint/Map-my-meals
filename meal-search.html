@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Map MY Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -20,62 +21,56 @@
 
 <body>
     <div class="container">
-        <header>
-            <!-- Navbar -->
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Map My Meals</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="meal-plan.html">Meal Plan</a></li>
-                        <li><a href="meal-search.html">Meal Search</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                    <ul class="right side-nav" id="mobile-demo">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="meal-plan.html">Meal Plan</a></li>
-                        <li><a href="meal-search.html">Meal Search</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Section for Meal Search -->
-        <main>
-            <form>
-                <div class="center row">
-                    <!-- Empty div on left side to center main div -->
-                    <div class="col s12 m1">
-                    </div>
-                    <!-- Main div for meal search input box and button -->
-                    <div class="col s12 m10">
-                        <div class="card brown darken-1">
-                            <div class="card-content white-text">
-                                <span class="center card-title">Meal Search</span>
-                                <div class="row" id="searchRow">
-                                    <div class="center-align col s12">
-                                        <input id="search" type="search" class="search">
-                                        <label for="search">Search Here</label>
-                                    </div>
-                                    <br />
-                                    <button class="btn waves-effect waves-light" id="submit" type="search" name="action">Search<i class="material-icons right">search</i>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Map My Meals</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+                <ul class="right side-nav" id="mobile-demo">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+                </ul>
+            </div>
+        </nav>
+        <!-- Search optimization section -->
+        <div class="row">
+            <div class="col offset-s1 s8 offset-s1">
+                <div class="card brown darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Meal Search</span>
+                        <!-- diet type drop down -->
+                        <div class="row">
+                            <div class="col s12">
+                                <input id="search" type="search" class="search">
+                                <label for="search">Search Here</label>
+
+                                <br />
+                                <button class="btn waves-effect waves-light" id="submit" type="search" name="action">Search<i class="material-icons right">search</i>
                                     </button>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <!--Empty div for recipes to populate -->
-                    <div class="card" id="search-results">
+                </div>
+            </div>
+            <div class="col s2">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Recent searches...</span>
+                        <hr>
+                        <button class="btn " id="clear" type="button" name="action">Clear history</i>
+                                    </button>
                     </div>
                 </div>
-                <!-- Empty div on left side to center main div -->
-                <div class="col s12 m1">
-                </div>
+            </div>
+        </div>
+
+    <!--Empty div for recipes to populate -->
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text" id="search-results"></div>
     </div>
-    </form>
-    </main>
     <!-- Footer -->
     <footer class="page-footer">
         <div class="footer-copyright">
@@ -84,6 +79,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
