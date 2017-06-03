@@ -27,8 +27,8 @@ main {
     border: 1px solid;
     border-color: #ffffff;
     width: 100%;
-/*    position: absolute;
-*/    bottom: 0;
+    position: absolute;
+    bottom: 0;
     /*background-color: #e3f2fd;
     border: 1px solid;
     border-color: #ffffff;

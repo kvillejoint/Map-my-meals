@@ -85,6 +85,13 @@ $("#submit").on("click", function (event) {
 });
 
 // run API call on recent search buttons values
-$(".searches").on("click", function() {
-	console.log("work damnit work");
+$(document).on("click", ".searches", function () {
+	console.log("recent search clicked");
+	console.log(this);
+	executeSearch($(this).val());
+})
+
+// clear recent searches
+$("#clear").on("click", function() {
+	$("#recent-search").empty();
 })
