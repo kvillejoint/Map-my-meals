@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Map MY Meals</title>
+    <title>Map My Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -20,139 +19,136 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navbar -->
+    <!-- Navbar -->
+    <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Map My Meals</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo black-text">Map My Meals</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a class="black-text" href="index.html">Home</a></li>
+                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
+                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
                 </ul>
                 <ul class="right side-nav" id="mobile-demo">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
+                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
+                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
                 </ul>
             </div>
         </nav>
+    </header>
+    <div class="container">
         <!-- Search optimization section -->
         <div id="search-parameters" class="container">
             <div class="row">
-                <div class="col offset-s1 s10 offset-s1">
-                    <div class="card brown darken-1">
-                        <div class="card-content white-text">
+                <div class="col s12 m8">
+                    <div class="card blue lighten-5">
+                        <div class="card-content black-text">
                             <span class="card-title">Tell us what to look for:</span>
-                            <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='diet-dropdown'>Diet Type</a>
-
-                            <!-- Dropdown Structure -->
-                            <ul id='diet-dropdown' class='dropdown-content'>
-                                <li id="diet-1">Atkins</li>
-                                <li id="diet-2">South Beach</li>
-                                <li id="diet-3">Paleo</li>
-                                <li id="diet-4">Vegetarian</li>
-                                <li id="diet-5">Vegan</li>
-                                <li id="diet-6">Weight Watchers</li>
-                                <li id="diet-7">Pescetarian</li>
-                            </ul>
-
-                            <!-- Dropdown Trigger -->
-                            <a class='dropdown-button btn' href='#' data-activates='allergy-dropdown'>Food allergy</a>
-
-                            <!-- Dropdown Structure -->
-                            <ul id='allergy-dropdown' class='dropdown-content'>
-                                <li id="allergy-01">Dairy</li>
-                                <li id="allergy-02">Eggs</li>
-                                <li id="allergy-03">Gluten</li>
-                                <li id="allergy-04">Peanuts</li>
-                                <li id="allergy-05">Seafood</li>
-                                <li id="allergy-06">Sesame</li>
-                                <li id="allergy-07">Soy</li>
-                                <li id="allergy-08">Sulfite</li>
-                                <li id="allergy-09">Tree nuts</li>
-                                <li id="allergy-10">Wheat</li>
-                            </ul>
-                            <br><br>
-                            <div class="divider"></div>
-                            <!-- table displaying search results -->
-                            <div class="card-action">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td>Results</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Diet type</td>
-                                            <td>Food allergies</td>
-                                        </tr>
-                                    </thead>
-                                </table>
+                            <!-- diet type drop down -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="" disabled selected>Diet Type</option>
+                                        <option value="atkins" id="diet-1">Atkins</option>
+                                        <option value="south beach" id="diet-2">South Beach</option>
+                                        <option value="paleo" id="diet-3">Paleo</option>
+                                        <option value="vegetarian" id="diet-4">Vegetarian</option>
+                                        <option value="vegan" id="diet-5">Vegan</option>
+                                        <option value="weight watchers" id="diet-6">Weight Watchers</option>
+                                        <option value="pescetarian" id="diet-7">Pescatarian</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- allergy drop down -->
+                            <div class="row">
+                                <div class="input-field col s12 black-text">
+                                    <select multiple>
+                                        <option value="" disabled selected>Allergies</option>
+                                        <option value="dairy" id="allergy-01">Dairy</option>
+                                        <option value="eggs" id="allergy-02">Eggs</option>
+                                        <option value="gluten" id="allergy-03">Gluten</option>
+                                        <option value="peanuts" id="allergy-04">Peanuts</option>
+                                        <option value="seafood" id="allergy-05">Seafood</option>
+                                        <option value="sesame" id="allergy-06">Sesame</option>
+                                        <option value="soy" id="allergy-07">Soy</option>
+                                        <option value="sulfite" id="allergy-08">Sulfites</option>
+                                        <option value="nuts" id="allergy-09">Nuts</option>
+                                        <option value="wheat" id="allergy-10">Wheat</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn waves-effect waves-light" id="plan-search" type="search" name="action">Search<i class="material-icons right">search</i>
+                            </button>
+                        </div>
+                        <div class="col s2">
+                            <div class="card light-green accent-1">
+                                <div class="card-content black-text">
+                                    <span class="card-title">Recent Searches</span>
+                                    <hr>
+                                    <button class="btn center" id="clear" type="button" name="action">Clear</i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Results section -->
-        <div id="meal-results" class="container">
-            <div class="row">
-                <div class="col offset-2 s8 offset-s2">
-                    <div id="breakfast" class="card brown darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Breakfast:</span>
-                        </div>
-                        <div class="card-action">
-                            <ul id="breakfast-results">
-                            </ul>
-                        </div>
+    </div>
+    <!-- Results section -->
+    <div id="meal-results" class="container">
+        <div class="row">
+            <div class="col offset-2 s8 offset-s2">
+                <div id="breakfast" class="card blue lighten-5">
+                    <div class="card-content black-text">
+                        <span class="card-title">Breakfast:</span>
+                    </div>
+                    <div class="card-action">
+                        <ul id="breakfast-results">
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col offset-2 s8 offset-s2">
-                    <div id="lunch" class="card brown darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Lunch:</span>
-                        </div>
-                        <div class="card-action">
-                            <ul id="lunch-results">
-                            </ul>
-                        </div>
+        </div>
+        <div class="row">
+            <div class="col offset-2 s8 offset-s2">
+                <div id="lunch" class="card blue lighten-5">
+                    <div class="card-content black-text">
+                        <span class="card-title">Lunch:</span>
+                    </div>
+                    <div class="card-action">
+                        <ul id="lunch-results">
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col offset-2 s8 offset-s2">
-                    <div id="dinner" class="card brown darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Dinner:</span>
-                        </div>
-                        <div class="card-action">
-                            <ul id="dinner-results">
-                            </ul>
-                        </div>
+        </div>
+        <div class="row">
+            <div class="col offset-2 s8 offset-s2">
+                <div id="dinner" class="card blue lighten-5">
+                    <div class="card-content black-text">
+                        <span class="card-title">Dinner:</span>
+                    </div>
+                    <div class="card-action">
+                        <ul id="dinner-results">
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <!-- Footer -->
     <footer class="page-footer">
-        <div class="footer-copyright">
-            <div class="container center">
+        <div class="footer-copyright blue lighten-5">
+            <div class="container center black-text">
                 © 2017 Map My Meals: Meal Planner and Nutrition Guide
             </div>
         </div>
     </footer>
-
-</body>
-<!-- Link to JavaScript -->
-<script type="text/javascript" src="./assets/javascript/logic.js"></script>
+    <!-- Link to JavaScript -->
+    <script type="text/javascript" src="./assets/javascript/logic.js"></script>
 
 </html>

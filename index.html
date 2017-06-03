@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Map MY Meals</title>
+    <title>Map My Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
-    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
@@ -20,53 +19,78 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navbar -->
+    
+        <!-- Navbar and SideNav-->
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Map My Meals</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo black-text">Map My Meals</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a class="black-text" href="index.html">Home</a></li>
                 </ul>
                 <ul class="right side-nav" id="mobile-demo">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
         </nav>
+    <div class="container">    
         <!-- SECTION NEEDS REVISION FOR DROPDOWN ITEMS -->
         <!-- Cards for Questions and Results -->
         <div class="row">
-            <div class="col s12">
-                <div class="col s12">
-                    <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">How will you be using our services today?</span>
-                        </div>
-                        <div class="card-action">
-                            <button id="single-search" class="btn waves-effect waves-light">Single meal search</button>
-                            <button id="prep-search" class="btn waves-effect waves-light">Meal prep search</button>
-                        </div>
+            <div class="col s12" class="main-row">
+                <div class="card blue lighten-5">
+                    <div class="card-content black-text">
+                        <span class="card-title center">How will you be using our services today?</span>
+                    </div>
+                </div>
+            </div>
+            <!--</div> -->
+            <!-- Card with Image for Single Meal Search -->
+            <div class="col s12 m6">
+                <div class="card center">
+                    <div class="card-image center">
+                        <img class="image" src="./assets/images/single-search.jpg">
+                        <span class="card-title">Single Search</span>
+                    </div>
+                    <div class="card-content black-text">
+                        <p>Click here to search for meal ideas. You may use ingredients, cuisine types, and more to search for great options.</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="meal-search.html">
+                            <button id="single-search" class="btn waves-effect waves-light">Single Meal Search</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card with Image for Meal Prep Search -->
+            <div class="col s12 m6">
+                <div class="card center">
+                    <div class="card-image center">
+                        <img class="image" src="./assets/images/meal-prep.jpg">
+                        <span class="card-title">Meal Prep Search</span>
+                    </div>
+                    <div class="card-content black-text">
+                        <p>Click here for enhanced meal prep ideas tailored to your diet type. Custom choices factor in allergies, and health goals.</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="meal-plan.html">
+                            <button id="prep-search" class="btn waves-effect waves-light">Meal Prep Search</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Footer -->
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container center">
-                    © 2017 Map My Meals: Meal Planner and Nutrition Guide
-                </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-copyright blue lighten-5">
+            <div class="container center black-text">
+                © 2017 Map My Meals: Meal Planner and Nutrition Guide
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
+<!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
 
 </html>

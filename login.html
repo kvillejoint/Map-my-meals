@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Map MY Meals</title>
+    <title>Map My Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -20,48 +19,59 @@
 </head>
 
 <body>
-    <div class="container">
+    <header>
         <!-- Navbar -->
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Map My Meals</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-                <ul class="right side-nav" id="mobile-demo">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="meal-plan.html">Meal plan</a></li>
-                    <li><a href="meal-search.html">Meal Search</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
+                <a href="#!" class="brand-logo black-text">Map My Meals</a>
             </div>
         </nav>
-        <!-- SECTION NEEDS REVISION FOR DROPDOWN ITEMS -->
-        <!-- Cards for Questions and Results -->
-        <div class="center row">
-            <div class="col s12 m1">
-            </div>
-            <div class="col s12 m10">
-                <div class="card brown darken-1">
-                    <button class="btn waves-effect waves-light" id="login" type="submit" name="action">Login With Google<i class="material-icons right">send</i>
-                    </button>
+    </header>
+    <div class="container">
+        <!-- Login Screen -->
+        <div class="section"></div>
+        <main id="login">
+            <center>
+                <h5 class="brown-text">Please login below</h5>
+                <div class="section"></div>
+                <div class="container">
+                    <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+                        <form class="col s12" method="post">
+                            <div class='row'>
+                                <div class='col s12'>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <input class='validate' type='email' name='email' id='email' />
+                                    <label for='email'>Enter your email</label>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='input-field col s12'>
+                                    <input class='validate' type='password' name='password' id='password' />
+                                    <label for='password'>Enter your password</label>
+                                </div>
+                            </div>
+                            <br />
+                            <center>
+                                <div class='row'>
+                                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                                </div>
+                            </center>
+                        </form>
+                    </div>
                 </div>
-                <div class="col s12 m1">
-                </div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container center">
-                    © 2017 Map My Meals: Meal Planner and Nutrition Guide
-                </div>
-            </div>
-        </footer>
+                <br />
+                <br />
+                <!-- Footer -->
+                <footer class="page-footer">
+                    <div class="footer-copyright blue lighten-5">
+                        <div class="container center black-text">
+                            © 2017 Map My Meals: Meal Planner and Nutrition Guide
+                        </div>
+                    </div>
+                </footer>
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>

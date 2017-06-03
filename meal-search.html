@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Map MY Meals</title>
+    <title>Map My Meals</title>
     <!-- Link to jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
@@ -19,28 +19,27 @@
 </head>
 
 <body>
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo black-text">Map My Meals</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+                <ul class="right hide-on-med-and-down black-text">
+                    <li><a class="black-text" href="index.html">Home</a></li>
+                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
+                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
+                </ul>
+                <ul class="right side-nav black-text" id="mobile-demo">
+                    <li><a class="black-text" href="index.html">Home</a></li>
+                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
+                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
+                    <li><a class="black-text" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="container">
-        <header>
-            <!-- Navbar -->
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Map My Meals</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="meal-plan.html">Meal Plan</a></li>
-                        <li><a href="meal-search.html">Meal Search</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                    <ul class="right side-nav" id="mobile-demo">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="meal-plan.html">Meal Plan</a></li>
-                        <li><a href="meal-search.html">Meal Search</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
         <!-- Section for Meal Search -->
         <main>
             <form>
@@ -50,15 +49,13 @@
                     </div>
                     <!-- Main div for meal search input box and button -->
                     <div class="col s12 m10">
-                        <div class="card brown darken-1">
-                            <div class="card-content white-text">
-                                <span class="center card-title">Meal Search</span>
+                        <div class="card blue lighten-5" id="card-extend">
+                            <div class="card-content black-text">
+                                <span class="center card-title black-text">Meal Search</span>
                                 <div class="row" id="searchRow">
                                     <div class="center-align col s12">
-                                        <input id="search" type="search" class="search">
-                                        <label for="search">Search Here</label>
+                                        <input id="search" type="search" class="search" placeholder="Search Here">
                                     </div>
-                                    <br />
                                     <button class="btn waves-effect waves-light" id="submit" type="search" name="action">Search<i class="material-icons right">search</i>
                                     </button>
                                 </div>
@@ -67,8 +64,7 @@
                     </div>
                     <br />
                     <!--Empty div for recipes to populate -->
-                    <div class="card" id="search-results">
-                    </div>
+                    <div class="card" id="search-results"></div>
                 </div>
                 <!-- Empty div on left side to center main div -->
                 <div class="col s12 m1">
@@ -78,8 +74,8 @@
     </main>
     <!-- Footer -->
     <footer class="page-footer">
-        <div class="footer-copyright">
-            <div class="container center">
+        <div class="footer-copyright blue lighten-5">
+            <div class="container center black-text">
                 © 2017 Map My Meals: Meal Planner and Nutrition Guide
             </div>
         </div>
