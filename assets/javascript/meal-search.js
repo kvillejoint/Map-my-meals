@@ -1,21 +1,29 @@
 // Initialize Firebase
-// var config = {
-// apiKey: "AIzaSyCBDkcfg8xnegsitok08Xu5n1amcBfxD_E",
-// authDomain: "map-my-meal-9c98b.firebaseapp.com",
-// databaseURL: "https://map-my-meal-9c98b.firebaseio.com",
-// projectId: "map-my-meal-9c98b",
-// storageBucket: "map-my-meal-9c98b.appspot.com",
-// messagingSenderId: "110980164870"
-// };
+var config = {
+	apiKey: "AIzaSyCBDkcfg8xnegsitok08Xu5n1amcBfxD_E",
+	authDomain: "map-my-meal-9c98b.firebaseapp.com",
+	databaseURL: "https://map-my-meal-9c98b.firebaseio.com",
+	projectId: "map-my-meal-9c98b",
+	storageBucket: "map-my-meal-9c98b.appspot.com",
+	messagingSenderId: "110980164870"
+};
 
-// firebase.initializeApp(config);
+firebase.initializeApp(config);
 
-// var database = firebase.database();
+var database = firebase.database();
 
 var AppID = "4415471a";
 var APIKey = "ab3e2bd0953f0ffa8814cf394bba9d8f";
 var searches = [""];
 
+// on load of page...
+$(document).ready(function () {
+	// sets sticky footer
+	$(".page-footer").css("position", "absolute");
+	$(".page-footer").css("bottom", "0");
+	$(".page-footer").css("left", "0");
+
+})
 
 //go to Yummly to get recipe name
 function executeSearch(searchTerm) {
@@ -47,7 +55,6 @@ function executeSearch(searchTerm) {
 
 			//upload to firebase
 			// database.ref().push(results);
-			// }
 		}
 	});
 }
@@ -73,6 +80,10 @@ function renderSearches() {
 $("#submit").on("click", function (event) {
 	event.preventDefault();
 
+	$(".page-footer").css("position", "inherit");
+	// $(".page-footer").css("bottom", "");
+	// $(".page-footer").css("left", "");
+
 	//grab user input, plug them into executeSearch function & run it
 	var searchEntry = $("input").val().trim();
 	executeSearch(searchEntry);
@@ -80,6 +91,11 @@ $("#submit").on("click", function (event) {
 	searches.push(searchEntry);
 
 	$("input").val('')
+
+	// stores recent search array into firebase
+	database.ref().push(searches);
+
+	// populates recent searches from firebase db
 
 	renderSearches();
 });
@@ -92,6 +108,6 @@ $(document).on("click", ".searches", function () {
 })
 
 // clear recent searches
-$("#clear").on("click", function() {
+$("#clear").on("click", function () {
 	$("#recent-search").empty();
 })
