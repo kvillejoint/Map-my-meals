@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Map My Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified Materialize CSS -->
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-    
+    <div class="container">
         <!-- Navbar and SideNav-->
         <nav>
             <div class="nav-wrapper">
@@ -33,62 +34,65 @@
                 </ul>
             </div>
         </nav>
-    <div class="container">    
-        <!-- SECTION NEEDS REVISION FOR DROPDOWN ITEMS -->
-        <!-- Cards for Questions and Results -->
-        <div class="row">
-            <div class="col s12" class="main-row">
-                <div class="card blue lighten-5">
-                    <div class="card-content black-text">
-                        <span class="card-title center">How will you be using our services today?</span>
+        <div>
+            <!-- SECTION NEEDS REVISION FOR DROPDOWN ITEMS -->
+            <!-- Cards for Questions and Results -->
+            <div class="row">
+                <div class="col s12" class="main-row">
+                    <div class="card blue lighten-5">
+                        <div class="card-content black-text">
+                            <span class="card-title center">How will you be using our services today?</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--</div> -->
-            <!-- Card with Image for Single Meal Search -->
-            <div class="col s12 m6">
-                <div class="card center">
-                    <div class="card-image center">
-                        <img class="image" src="./assets/images/single-search.jpg">
-                        <span class="card-title">Single Search</span>
-                    </div>
-                    <div class="card-content black-text">
-                        <p>Click here to search for meal ideas. You may use ingredients, cuisine types, and more to search for great options.</p>
-                    </div>
-                    <div class="card-action center">
-                        <a href="meal-search.html">
+                <!--</div> -->
+                <!-- Card with Image for Single Meal Search -->
+                <div class="col s12 m6">
+                    <div class="card center">
+                        <div class="card-image center">
+                            <img class="image" src="./assets/images/single-search.jpg">
+                            <span class="card-title">Single Search</span>
+                        </div>
+                        <div class="card-content black-text">
+                            <p>Click here to search for meal ideas. You may use ingredients, cuisine types, and more to search
+                                for great options.</p>
+                        </div>
+                        <div class="card-action center">
+                            <a href="meal-search.html">
                             <button id="single-search" class="btn waves-effect waves-light">Single Meal Search</button>
                         </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Card with Image for Meal Prep Search -->
-            <div class="col s12 m6">
-                <div class="card center">
-                    <div class="card-image center">
-                        <img class="image" src="./assets/images/meal-prep.jpg">
-                        <span class="card-title">Meal Prep Search</span>
-                    </div>
-                    <div class="card-content black-text">
-                        <p>Click here for enhanced meal prep ideas tailored to your diet type. Custom choices factor in allergies, and health goals.</p>
-                    </div>
-                    <div class="card-action center">
-                        <a href="meal-plan.html">
+                <!-- Card with Image for Meal Prep Search -->
+                <div class="col s12 m6">
+                    <div class="card center">
+                        <div class="card-image center">
+                            <img class="image" src="./assets/images/meal-prep.jpg">
+                            <span class="card-title">Meal Prep Search</span>
+                        </div>
+                        <div class="card-content black-text">
+                            <p>Click here for enhanced meal prep ideas tailored to your diet type. Custom choices factor in
+                                allergies, and health goals.</p>
+                        </div>
+                        <div class="card-action center">
+                            <a href="meal-plan.html">
                             <button id="prep-search" class="btn waves-effect waves-light">Meal Prep Search</button>
                         </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer -->
-    <footer class="page-footer">
-        <div class="footer-copyright blue lighten-5">
-            <div class="container center black-text">
-                © 2017 Map My Meals: Meal Planner and Nutrition Guide
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-copyright blue lighten-5">
+                <div class="container center black-text">
+                    © 2017 Map My Meals: Meal Planner and Nutrition Guide
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
