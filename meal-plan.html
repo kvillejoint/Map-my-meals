@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Map My Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -27,13 +28,9 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="black-text" href="index.html">Home</a></li>
-                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
-                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
                 </ul>
                 <ul class="right side-nav" id="mobile-demo">
                     <li><a href="index.html">Home</a></li>
-                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
-                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
                 </ul>
             </div>
         </nav>
@@ -41,8 +38,9 @@
     <div class="container">
         <!-- Search optimization section -->
         <div id="search-parameters" class="container">
+            <!-- open top area -->
             <div class="row">
-                <div class="col s12 m8">
+                <div class="col s9 m9">
                     <div class="card blue lighten-5">
                         <div class="card-content black-text">
                             <span class="card-title">Tell us what to look for:</span>
@@ -61,6 +59,7 @@
                                     </select>
                                 </div>
                             </div>
+                            <!-- close diet drop down -->
                             <!-- allergy drop down -->
                             <div class="row">
                                 <div class="input-field col s12 black-text">
@@ -79,22 +78,30 @@
                                     </select>
                                 </div>
                             </div>
+                            <!-- close allergy drop down -->
                             <button class="btn waves-effect waves-light" id="plan-search" type="search" name="action">Search<i class="material-icons right">search</i>
                             </button>
                         </div>
-                        <div class="col s2">
-                            <div class="card light-green accent-1">
-                                <div class="card-content black-text">
-                                    <span class="card-title">Recent Searches</span>
-                                    <hr>
-                                    <button class="btn center" id="clear" type="button" name="action">Clear</i>
-                                    </button>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <!-- open recent searches -->
+                <div class="col s3 m3">
+                    <div class="card blue lighten-5">
+                        <div class="card-content black-text">
+                            <span class="card-title">Recent searches...</span>
+                            <hr>
+                            <ul id="recent-search">
+
+                            </ul>
+                            <hr>
+                            <a href="#" id="clear">Clear history
+                                    </a>
                         </div>
                     </div>
                 </div>
+                <!-- close recent searches -->
             </div>
+            <!-- close top area -->
         </div>
     </div>
     <!-- Results section -->
