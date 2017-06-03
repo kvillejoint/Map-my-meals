@@ -18,7 +18,7 @@ var APIKey = "ab3e2bd0953f0ffa8814cf394bba9d8f";
 
 //go to Yummly to get recipe name
 function executeSearch(searchTerm) {
-	var queryURLBase = `http://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(searchTerm) }`;
+	var queryURLBase = `http://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(searchTerm) }&requirePictures=true`;
 	$.ajax({
 		url: queryURLBase
 	}).done(function(res){
@@ -29,16 +29,19 @@ function executeSearch(searchTerm) {
 			$("#search-results").empty();
 
 			res.matches.forEach(function(match){
+				
+				var resultItem = $('<div>');
+				resultItem.attr("class", "result-item");
+				var recipeName = $('<p class="result-item_name">' + `${ match.recipeName }` + '</p>');
+				var resultImg = $(`<img src="${ match.imageUrlsBySize[90] }"/>`)
+				var recipeIngredients = $(`<p class="result-item_ingredients">${ match.ingredients }</p>`)
 
-				var resultItem = $('<div class="result-item">');
-				var recipeName = $(`<div class="result-item_name">${ match.recipeName }</div>`);
-				var recipeIng = $(`<div class="result-item_ingredients">${ match.ingredients }</div>`)
-
-				console.log(match.recipeName)
-				console.log(match.ingredients)
+				// console.log(match.recipeName)
+				// console.log(match.ingredients)
 
 				resultItem.append(recipeName);
-				resultItem.append(recipeIng);
+				resultItem.append(resultImg);
+				resultItem.append(recipeIngredients);
 				$('#search-results').append(resultItem);
 			}) 
 			
