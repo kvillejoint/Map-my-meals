@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Map My Meals</title>
     <!-- Link to jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
     <!-- Compiled and minified CSS -->
@@ -27,14 +28,9 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
                 <ul class="right hide-on-med-and-down black-text">
                     <li><a class="black-text" href="index.html">Home</a></li>
-                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
-                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
                 </ul>
                 <ul class="right side-nav black-text" id="mobile-demo">
                     <li><a class="black-text" href="index.html">Home</a></li>
-                    <li><a class="black-text" href="meal-plan.html">Meal Plan</a></li>
-                    <li><a class="black-text" href="meal-search.html">Meal Search</a></li>
-                    <li><a class="black-text" href="login.html">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -44,11 +40,8 @@
         <main>
             <form>
                 <div class="center row">
-                    <!-- Empty div on left side to center main div -->
-                    <div class="col s12 m1">
-                    </div>
                     <!-- Main div for meal search input box and button -->
-                    <div class="col s12 m10">
+                    <div class="col offset-s1 s8 offset-m1 m8">
                         <div class="card blue lighten-5" id="card-extend">
                             <div class="card-content black-text">
                                 <span class="center card-title black-text">Meal Search</span>
@@ -62,13 +55,30 @@
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <!--Empty div for recipes to populate -->
-                    <div class="card" id="search-results"></div>
+                    <!-- close search area -->
+                    <!-- open recent searches area -->
+                    <div class="col s2 offset-s1 m2 offset-m1">
+                        <div class="card blue lighten-5">
+                            <div class="card-content black-text">
+                                <span class="card-title">Recent searches...</span>
+                                <hr>
+                                <div id="recent-search">
+                                    
+                                </div>
+                                <hr>
+                                <a href="#" id="clear">Clear history
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Empty div on left side to center main div -->
-                <div class="col s12 m1">
+                <!--Empty div for recipes to populate -->
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card" id="search-results"></div>
+                    </div>
                 </div>
+
     </div>
     </form>
     </main>
