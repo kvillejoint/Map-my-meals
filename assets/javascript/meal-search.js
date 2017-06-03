@@ -44,9 +44,6 @@ function executeSearch(searchTerm) {
 				var resultImg = $(`<img src="${ match.imageUrlsBySize[90] }"/>`)
 				var recipeIngredients = $(`<p class="result-item_ingredients">${ match.ingredients }</p>`)
 
-				// console.log(match.recipeName)
-				// console.log(match.ingredients)
-
 				resultItem.append(recipeName);
 				resultItem.append(resultImg);
 				resultItem.append(recipeIngredients);
