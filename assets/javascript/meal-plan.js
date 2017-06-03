@@ -5,10 +5,8 @@ $(document).ready(function () {
     $('select').material_select();
 });
 
-// var allergySearch = $("#allery-type").val().trim();
-
-function executeSearch (dietSearch) {
-	var queryURL = `http://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(dietSearch) }`;
+function executeSearch (dietSearch, allergySearch) {
+	var queryURL = `http://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(dietSearch) }&allowedAllergy[]=${ encodeURI(allergySearch)}`;
 	$.ajax({
 		url: queryURL
 	}).done(function(res){
@@ -70,10 +68,8 @@ function executeSearch (dietSearch) {
 }
 
 $('#plan-search').on('click', function(search){
-	// $("#search-parameters").hide();
-	// $("#meal-results").show();
-	// $(".button-collapse").sideNav();
 	search.preventDefault();
 	var dietChoice = $("#diet-type").val();
-	executeSearch(dietChoice);
+	var allergyChoice = $("#allery-type").val();
+	executeSearch(dietChoice, allergyChoice);
 });

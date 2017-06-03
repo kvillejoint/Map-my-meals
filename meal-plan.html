@@ -49,7 +49,7 @@
                             <!-- diet type drop down -->
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <select>
+                                    <select id="diet-type">
                                         <option value="" disabled selected>Diet Type</option>
                                         <option value="atkins" id="diet-1">Atkins</option>
                                         <option value="south beach" id="diet-2">South Beach</option>
@@ -64,7 +64,7 @@
                             <!-- allergy drop down -->
                             <div class="row">
                                 <div class="input-field col s12 black-text">
-                                    <select multiple>
+                                    <select multiple id="allergy-type">
                                         <option value="" disabled selected>Allergies</option>
                                         <option value="dairy" id="allergy-01">Dairy</option>
                                         <option value="eggs" id="allergy-02">Eggs</option>
@@ -106,8 +106,8 @@
                         <span class="card-title">Breakfast:</span>
                     </div>
                     <div class="card-action">
-                        <ul id="breakfast-results">
-                        </ul>
+                        <div id="breakfast-results">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,8 +119,8 @@
                         <span class="card-title">Lunch:</span>
                     </div>
                     <div class="card-action">
-                        <ul id="lunch-results">
-                        </ul>
+                        <div id="lunch-results">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,8 +132,8 @@
                         <span class="card-title">Dinner:</span>
                     </div>
                     <div class="card-action">
-                        <ul id="dinner-results">
-                        </ul>
+                        <div id="dinner-results">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,5 +150,6 @@
     </footer>
     <!-- Link to JavaScript -->
     <script type="text/javascript" src="./assets/javascript/logic.js"></script>
+    <script type="text/javascript" src="./assets/javascript/meal-plan.js"></script>
 
 </html>
