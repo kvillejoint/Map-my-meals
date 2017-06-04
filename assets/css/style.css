@@ -6,6 +6,10 @@ body {
     width: 100%;
 }
 
+.brand-logo {
+    font-family: 'Fredoka One', cursive;
+}
+
 main {
     flex: 1 0 auto;
 }
@@ -49,4 +53,9 @@ main {
 
 #placeholder {
     color:grey;
+}
+
+.google-login {
+    height: 50px;
+    width: 200px;
 }

@@ -9,6 +9,8 @@
         crossorigin="anonymous"></script>
     <!-- Link to Reset CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"></link>
+    <!-- Link for Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
@@ -17,7 +19,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Link to Style CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"></link>
-
+    <!-- Link for Google Login button -->
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <style>
         .page-footer {
             background-color: #e3f2fd;
@@ -77,6 +80,10 @@
                                     <button type='submit' name='btn_login' class='btn waves-effect waves-light'>Login</button>
                                 </div>
                             </center>
+                            <br />
+                            <input type="image" class="google-login" src="https://developers.google.com/accounts/images/sign-in-with-google.png" />                   
+                            <br />
+                            <br />
                         </form>
                     </div>
                 </div>
@@ -86,12 +93,14 @@
                 <footer class="page-footer">
                     <div class="footer-copyright blue lighten-5">
                         <div class="container center black-text">
-                            © 2017 Map My Meals: Meal Planner and Nutrition Guide
+                            © 2017 Map My Meals: Meal Planner and Search Guide
                         </div>
                     </div>
                 </footer>
+            </center>
+        </main>
+    </div>
 </body>
 <!-- Link to JavaScript -->
 <script type="text/javascript" src="./assets/javascript/logic.js"></script>
-
 </html>
