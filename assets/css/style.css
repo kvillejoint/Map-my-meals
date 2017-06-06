@@ -14,6 +14,10 @@ main {
     flex: 1 0 auto;
 }
 
+li {
+    margin-top:5px;
+}
+
 .container {
 	width: 100%;
 }
@@ -58,4 +62,35 @@ main {
 .google-login {
     height: 50px;
     width: 200px;
+}
+
+.result-item,.breakfast-item,.lunch-item,.dinner-item {
+    text-align:center;
+}
+
+.result-item_name {
+    font-weight:bold;
+    font-size:20px;
+    margin-top:10px;
+}
+
+.breakfast-item_name,.lunch-item_name,.dinner-item_name {
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.label {
+    text-decoration:underline;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.result-item_name, .result-item_ingredients,.breakfast-item_name,.lunch-item_name,.dinner-item_name,.breakfast-item_ingredients,.lunch-item_ingredients,.dinner-item_ingredients {
+    text-align:center;
+}
+
+.searches:hover, #clear:hover {
+    color: black;
+    text-decoration: underline;
 }

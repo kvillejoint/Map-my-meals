@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 //go to Yummly to get recipe name
 function executeSearch(searchTerm) {
-	var queryURLBase = `http://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(searchTerm) }&requirePictures=true`;
+	var queryURLBase = `https://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(searchTerm) }&requirePictures=true`;
 	$.ajax({
 		url: queryURLBase
 	}).done(function (res) {
@@ -42,7 +42,7 @@ function executeSearch(searchTerm) {
 				resultItem.attr("class", "result-item");
 				var recipeName = $('<p class="result-item_name">' + `${ match.recipeName }` + '</p>');
 				var resultImg = $(`<img src="${ match.imageUrlsBySize[90] }"/>`)
-				var recipeIngredients = $(`<p class="result-item_ingredients">${ match.ingredients }</p>`)
+				var recipeIngredients = $(`<p class="result-item_ingredients"><span class="label">Ingredients:</span><br> ${ match.ingredients }</p><hr>`)
 
 				resultItem.append(recipeName);
 				resultItem.append(resultImg);
@@ -101,7 +101,7 @@ $("#submit").on("click", function (event) {
 $(document).on("click", ".searches", function () {
 	console.log("recent search clicked");
 	console.log(this);
-	executeSearch($(this).val());
+	executeSearch($(this).val().trim());
 })
 
 // clear recent searches
