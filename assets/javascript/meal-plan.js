@@ -13,7 +13,7 @@ $(document).ready(function () {
 });
 
 function executeSearch(dietSearch, allergySearch) {
-	var queryURL = `http://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(dietSearch) }&allowedAllergy[]=${ encodeURI(allergySearch)}`;
+	var queryURL = `https://api.yummly.com/v1/api/recipes?_app_id=${ AppID }&_app_key=${ APIKey }&q=${ encodeURI(dietSearch) }&allowedAllergy[]=${ encodeURI(allergySearch)}`;
 	$.ajax({
 		url: queryURL
 	}).done(function (res) {
@@ -49,7 +49,7 @@ function executeSearch(dietSearch, allergySearch) {
 		var lunchDiv = $('<div class="lunch-item">');
 		var lunchName = $(`<p class="lunch-item_name">${ lunchResName }</p>`);
 		var lunchImage = $('<img src="' + `${lunchResImage}` + '"/>')
-		var lunchIngredients = $(`<p class="lunch-item_ingredients">${ lunchResIngredient}</p>`)
+		var lunchIngredients = $(`<p class="lunch-item_ingredients"><span class="label">Ingredients:</span><br>${ lunchResIngredient}</p>`)
 
 		lunchDiv.append(lunchName);
 		lunchDiv.append(lunchImage);
@@ -65,7 +65,7 @@ function executeSearch(dietSearch, allergySearch) {
 		var dinnerDiv = $('<div class="dinner-item">');
 		var dinnerName = $(`<p class="dinner-item_name">${ dinnerResName }</p>`);
 		var dinnerImage = $('<img src="' + `${dinnerResImage}` + '"/>')
-		var dinnerIngredients = $(`<p class="dinner-item_ingredients">${ dinnerResIngredient}</p>`)
+		var dinnerIngredients = $(`<p class="dinner-item_ingredients"><span class="label">Ingredients:</span><br>${ dinnerResIngredient}</p>`)
 
 		dinnerDiv.append(dinnerName);
 		dinnerDiv.append(dinnerImage);
@@ -75,6 +75,8 @@ function executeSearch(dietSearch, allergySearch) {
 }
 
 function renderMeals() {
+	$("#recent-search").empty();
+
 	for (var i = 0; i < planSearches.length; i++) {
 		var list = $("<li>");
 		var newSearch = $("<a href='#'>");
